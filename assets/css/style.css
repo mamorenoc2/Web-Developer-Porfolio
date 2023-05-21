@@ -32,7 +32,7 @@
 }
 
 
-/* ==================  BASE ==================== */
+/* ====================================  BASE ====================================== */
 
 * {
     margin: 0;
@@ -92,10 +92,31 @@ img {
     gap: 1.5rem;
 }
 
+.section {
+    padding-block: 6rem;
+}
+
+.section__title{
+    font-size: var(--h1-font-size);
+    font-weight: var(--weight-400);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.section__title::before{
+    content: attr(data-title);
+    display: block;
+    color: var(--first-color);
+    font-size: var(--large-font-size);
+    font-weight: var(--weight-600);
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
 /* ==================  STYLE SWITCHER =============== */
 
 
-/* ==================  HEADER & NAV =============== */
+/* ====================================  HEADER & NAV ================================= */
 .header {
     position: fixed;
     top: 0;
@@ -139,7 +160,7 @@ img {
 
 
 
-/* ==================  HOME =============== */
+/* ====================================  HOME ================================= */
 
 .home {
     background-color: var(--container-color);
@@ -268,3 +289,157 @@ img {
     color: white;
 }
 
+/* ====================================  ABOUT ==================================== */
+
+.about__container{
+    grid-template-columns: 4fr 8fr;
+    align-items: center;
+}
+
+
+.about__img-wrapper{
+    margin-inline: auto 2rem;
+    position: relative;
+}
+
+.about__img-wrapper::before,
+.about__img-wrapper::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.about__img-wrapper::before{
+    background-color: var(--first-color);
+    animation: animate__before__about 8s ease-in-out infinite;
+}
+
+.about__img-wrapper::after{
+    background-color: var(--first-color);
+}
+
+.about__img-wrapper::after,
+.about__img{
+    animation: animate__after__about 8s ease-in-out infinite;
+}
+
+
+.about__img {
+    z-index: 10;
+    position: relative;
+    vertical-align: middle;
+}
+
+
+/* about ANIMATION */
+
+@keyframes animate__before__about {
+    0% {
+        border-radius: 66% 34% 70% 30% / 71% 63% 37% 29%;
+    }
+
+    50% {
+        border-radius: 25% 75% 17% 83% / 35% 63% 37% 65%;
+    }
+
+    100% {
+        border-radius: 66% 34% 70% 30% / 71% 63% 37% 29%;
+    }
+}
+
+@keyframes animate__after__about {
+    0% {
+        border-radius: 25% 75% 17% 83% / 35% 63% 37% 65%;
+    }
+
+    50% {
+        border-radius: 66% 34% 70% 30% / 71% 63% 37% 29%;
+    }
+
+    100% {
+        border-radius: 25% 75% 17% 83% / 35% 63% 37% 65%;
+    }
+}
+
+.about__description{
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about__data{
+    grid-template-columns: repeat(2, 1fr);
+    gap: .25rem;
+    margin-bottom: 3rem;
+}
+
+.data__item{
+    display: flex;
+    column-gap: .75rem;
+}
+.data__title{
+    font-size: var(--larger-font-size);
+}
+.about__link{
+    color: var(--first-color);
+}
+
+.about__bottom,
+.about__social-links{
+    display: flex;
+    align-items: center;
+}
+
+.about__bottom{
+    column-gap: 3rem;
+}
+
+.about__social-links{
+    column-gap: 1.5rem;
+}
+
+.about__social-links::before{
+    content: '';
+    background-color: var(--first-color);
+    width: 60px;
+    height: 2px;
+}
+
+.about__social-link {
+    color: var(--first-color);
+    transition: all 0.3s ease;
+}
+
+.about__social-link:hover{
+    color: var(--text-color);
+}
+/*==================================== SKILLS ========================================*/
+
+/*==================================== PORTFOLIO ====================================*/
+
+/* Work hover */
+
+/*=================================== TESTIMONIALS ===================================*/
+
+/*=================================== CONTACT ======================================*/
+
+/*=============== FOOTER ===============*/
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+}
+
+/* For small devices */
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 450px) {
+}
