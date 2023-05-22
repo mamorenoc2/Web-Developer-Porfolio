@@ -12,10 +12,26 @@
 
 </head>
 <body>
+    <!-- ==================  SWITCHER STYLER ====================== -->
+    <input type="checkbox" name="" id="day-night" />
+
+    <div class="style__switcher">
+        <label for="day-night" class="style__switcher-theme">
+            <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-moon"></i>
+        </label>
+    </div>
     <!-- ==================  HEADER ====================== -->
     <header class="header">
         <nav class="nav container">
             <a href="index.html" class="nav__logo">Manuela</a>
+
+            <input type="checkbox" id="nav-toggler">
+
+            <label for="nav-toggler" class="nav__toggle">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
             <ul class="nav__list">
                 <li class="nav__item"><a href="#home" class="nav__link">Inicio</a></li>
                 <li class="nav__item"><a href="#about" class="nav__link">Sobre mi</a></li>
@@ -24,6 +40,8 @@
                 <li class="nav__item"><a href="#work" class="nav__link">Portafolio</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
             </ul>
+
+            
         </nav>
     </header>
     <!-- ==================  MAIN ====================== -->
@@ -33,13 +51,13 @@
         <div class="home__container container grid">
             <div class="home__content">
                 <span class="home__small">Hola</span>
-                <h1 class="home__title  "><span>Soy</span> Manuela! <br> <span> Desarrolladora Web</span></h1>
+                <h1 class="home__title"><span>Soy</span> Manuela! <br> <span> Desarrolladora Web</span></h1>
                 <p class="home__description">
                     ¡Soy una desarrolladora web creativa y apasionada por la programación y el arte!. Mi principal enfoque está en el diseño y la tecnología frontend, donde puedo combinar mis habilidades técnicas con mi amor por la estética visual.
                 </p>
                 <div class="home__btns">
                     <a href="#contact" class="btn">Contrátame</a>
-                    <a href="#portfolio" class="btn btn--transparent">Portafolio</a>
+                    <a href="#work" class="btn btn--transparent">Portafolio</a>
 
                 </div>
             </div>
@@ -119,7 +137,7 @@
                                 <h3 class="resume__title">Ingeniería en Sistemas</h3>
                                 <span class="resume__date">2020 - Presente</span>
                             </div>
-                                <p class="resume__description">Ingeniería de Sistemas ofrece una formación integral en las áreas fundamentales de la computación, la aplicación de ésta en diferentes áreas de profundización y formar profesionales que entiendan las necesidades de la sociedad y las organizaciones, con el fin de proponer soluciones eficientes e innovadoras basadas en la computación. </p>
+                                <p class="resume__description">Ingeniería de Sistemas ofrece una formación integral en las áreas fundamentales de la computación, formando profesionales que entiendan las necesidades de la sociedad y las organizaciones, con el fin de proponer soluciones eficientes e innovadoras basadas en la computación. </p>
                         </div>
                     </div>
                     <div class="resume__item">
@@ -128,7 +146,7 @@
                         </div>
                         <div class="resume__content">
                             <div class="resume__date-title">
-                                <h3 class="resume__title">Especializacion de Front-End</h3>
+                                <h3 class="resume__title">Bootcamp Front-End</h3>
                                 <span class="resume__date">May 2023 - Dic 2023</span>
                             </div>
                             <p class="resume__description">Adquirir competencias para crear los componentes visuales de un sitio web y la interactividad de este sitio web con el manejo de Responsive Desing, WebPack, Babel, ReactJS intermedio, Sistemas de Control de Versiones (Git y GitHub) y despliegue de Aplicaciones en la nube (Netlify, Vercel, GitHub Pages, Firebase)</p>
@@ -148,7 +166,7 @@
                                 <h3 class="resume__title">Desarrolladora web Junior</h3>
                                 <span class="resume__date">Ene 2023 - Presente</span>
                             </div>
-                                <p class="resume__description">NOVA es un grupo estudiantil de la Universidad EAFIT, enfocado en el área de tecnología e innovación; Como grupo somos un espacio para aprender, crear y transmitir conocimientos sobre nuevas tecnologías, desarrollo y programación de software, así como temas relevantes de la industria 4.0. </p>
+                                <p class="resume__description">NOVA es un grupo estudiantil de la Universidad EAFIT, enfocado en el área de tecnología e innovación; Es un espacio para aprender, crear y transmitir conocimientos sobre nuevas tecnologías, desarrollo y programación de software, así como temas relevantes de la industria 4.0. </p>
                         </div>
                     </div>
                     <div class="resume__item">
@@ -160,7 +178,7 @@
                                 <h3 class="resume__title">Miembro</h3>
                                 <span class="resume__date">Ago 2021 - Presente</span>
                             </div>
-                                <p class="resume__description">La Organización Estudiantil, creada en 1987, es ahora el grupo estudiantil más grande de la Universidad EAFIT, el cual te ofrece una experiencia cercana a una organización real, permitiéndote conocer y trabajar en las áreas de mercadeo, finanzas, gestión humana y logística, especialmente en el grupo Ingeniería en Sistemas. </p>
+                                <p class="resume__description">La Organización Estudiantil, creada en 1987, es ahora el grupo estudiantil más grande de la Universidad EAFIT, el cual te ofrece una experiencia cercana a una organización real, permitiéndote conocer y trabajar en las áreas de mercadeo, finanzas, gestión humana y logística, especialmente en Ingenieria en sistemas. </p>
                         </div>
                     </div>
                 </div>
@@ -231,7 +249,7 @@
                     <h3 class="skills__name">JAVASCRIPT</h3>
                     <span class="skills__no">20%</span>
                 </div>
-                <p class="skills__description"> Lenguaje de programación clave para interacciones y dinamismo en la interfaz.</p>
+                <p class="skills__description"> El lenguaje de programación clave para poder realizar las interacciones y dinamismo en la interfaz de la web.</p>
                 <div class="skills__bar">
                     <div class="skills__percentage" style="width: 20%;">
                         <span></span>
@@ -243,7 +261,7 @@
                     <h3 class="skills__name">REACT</h3>
                     <span class="skills__no">10%</span>
                 </div>
-                <p class="skills__description">Amplio conocimiento en el framework enfocado en componentes reutilizables y actualizaciones eficientes del estado.</p>
+                <p class="skills__description">Tengo amplio conocimiento enfocado en componentes reutilizables y actualizaciones eficientes del estado.</p>
                 <div class="skills__bar">
                     <div class="skills__percentage" style="width: 10%;">
                         <span></span>
@@ -267,7 +285,7 @@
                     <h3 class="skills__name">FIGMA</h3>
                     <span class="skills__no">10%</span>
                 </div>
-                <p class="skills__description"> Herramienta de diseño de interfaces de usuario en la nube para crear, colaborar y prototipar diseños de manera eficiente.</p>
+                <p class="skills__description"> Es la herramienta de diseño de interfaces de usuario alojada en la nube para crear, colaborar y prototipar los mejores diseños de manera eficiente.</p>
                 <div class="skills__bar">
                     <div class="skills__percentage" style="width: 10%;">
                         <span></span>
@@ -279,7 +297,7 @@
                     <h3 class="skills__name">REDUX</h3>
                     <span class="skills__no">10%</span>
                 </div>
-                <p class="skills__description">Experiencia en el manejo de estado de la aplicación con herramientas como Redux  de forma predecible y unidireccional.</p>
+                <p class="skills__description">Tengo alta experiencia en el manejo del estado de la aplicación con herramientas como Redux para hacerlo de forma predecible y unidireccional.</p>
                 <div class="skills__bar">
                     <div class="skills__percentage" style="width: 10%;">
                         <span></span>
@@ -287,36 +305,141 @@
                 </div>
             </div>
         </div>
+        <br>
         <h2 class="section__title title-center">Habilidades Blandas</h2>
         <div class="skills__container container grid">
-            <div class="skills__item">
-                <div class="skills__item">
-                    <div class="skills__titles">
-                        <h3 class="skills__name"></h3>
-                        <span class="skills__no"></span>
-                    </div>
-                    <p class="skills__description"></p>
-                </div>
-                <div class="skills__item">
-                    <div class="skills__titles">
-                        <h3 class="skills__name"></h3>
-                        <span class="skills__no"></span>
-                    </div>
-                    <p class="skills__description"></p>
-                </div>
-                <div class="skills__item">
-                    <div class="skills__titles">
-                        <h3 class="skills__name"></h3>
-                        <span class="skills__no"></span>
-                    </div>
-                    <p class="skills__description"></p>
-                </div>
+            <div class="skills-core__item">
+                <i class="fa-solid fa-comment skills-core__icon"></i>
+                <h3 class="skills-core__title">Comunicación efectiva</h3>
+                <p class="skills-core__description">Tengo la capacidad de expresar ideas y colaborar con el equipo de desarrollo y otros stakeholders de forma eficiente y clara.</p>
+            </div>
+            <div class="skills-core__item">
+                <i class="fa-solid fa-lightbulb skills-core__icon"></i>
+                <h3 class="skills-core__title">Resolución de problemas</h3>
+                <p class="skills-core__description">Tengo la Aptitud para identificar y solucionar desafíos técnicos de manera eficiente.</p>
+            </div>
+            <div class="skills-core__item">
+                <i class="fa-solid fa-brain skills-core__icon"></i>
+                <h3 class="skills-core__title">Pensamiento crítico</h3>
+                <p class="skills-core__description">Habilidad para evaluar opciones, tomar decisiones fundamentadas y encontrar soluciones creativas a problemas complejos,</p>
             </div>
         </div>
     </section>
     <!-- ==================  PORFOLIO =================== -->
-    </main>
-    
+    <section class="work section" id="work">
+        <h2 class="section__title title-center" data-title="Portaforlio">Trabajos Destacados</h2>
+        <div class="work__container container grid">
+            <div class="work__card">
+                <img src="/Web-Developer-Porfolio/assets/img/project-img-1.jpg" alt="Imagen proyecto 1" class="work__img">
+                <div class="work__details">
+                    <h3 class="work__title">Tienda en Línea</h3>
+                    <span class="work__description">Tecnologías: React, Node.js y MongoDB. Incluye funcionalidades como búsqueda de productos, carrito de compras, registro de usuarios y procesamiento de pagos.</span>
+                </div>
+            </div>
+            <div class="work__card">
+                <img src="/Web-Developer-Porfolio/assets/img/project-img-2.jpg" alt="Imagen proyecto 1" class="work__img">
+                <div class="work__details">
+                    <h3 class="work__title">Tablero de administración</h3>
+                    <span class="work__description">Framework: React. Incluye gráficos, tablas dinámicas y funciones de gestión de datos.</span>
+                </div>
+            </div>
+            <div class="work__card">
+                <img src="/Web-Developer-Porfolio/assets/img/project-img-3.jpg" alt="Imagen proyecto 1" class="work__img">
+                <div class="work__details">
+                    <h3 class="work__title">Aplicación de clima</h3>
+                    <span class="work__description"> Uso de APIs de servicios meteorológicos. Incluye funcionalidades como búsqueda por ubicación, visualización de datos y diseño atractivo.</span>
+                </div>
+            </div>
+            <div class="work__card">
+                <img src="/Web-Developer-Porfolio/assets/img/project-img-4.jpg" alt="Imagen proyecto 1" class="work__img">
+                <div class="work__details">
+                    <h3 class="work__title">Red social temática</h3>
+                    <span class="work__description">Tecnologías: _____ . Permite a los usuarios registrarse, compartir contenido relacionado, interactuar y seguir a otros usuarios.</span>
+                </div>
+            </div>
+            <div class="work__card">
+                <img src="/Web-Developer-Porfolio/assets/img/project-img-5.jpg" alt="Imagen proyecto 1" class="work__img">
+                <div class="work__details">
+                    <h3 class="work__title">Plataforma de blogging</h3>
+                    <span class="work__description">Los usuarios puedan crear y compartir publicaciones, comentar, clasificar y buscar contenido. Utiliza tecnologías como React, Express y MongoDB.</span>
+                </div>
+            </div>
+            <div class="work__card">
+                <img src="/Web-Developer-Porfolio/assets/img/project-img-6.jpg" alt="Imagen proyecto 1" class="work__img">
+                <div class="work__details">
+                    <h3 class="work__title">Aplicación de lista de tareas</h3>
+                    <span class="work__description"> Permite a los usuarios crear, organizar y marcar tareas como completadas. Tiene funcionalidades como recordatorios, categorías y opciones de personalización.</span>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- ==================  CONTACT ===================== -->
+    <section class="contact section" id="contact">
+        <h2 class="section__title title-center" data-title="Contacto">Hablemos!</h2>
+        <div class="conctact__container container grid">
+            <div class="contact__details">
+                <div class="conctact__item">
+                    <i class="fa-solid fa-phone conctact__icon"></i>
+                    <div>
+                        <h3 class="conctact__title">Llámame</h3>
+                        <span class="conctact__data">+57 3024564063</span>
+                    </div>
+                </div>
+                <div class="conctact__item">
+                    <i class="fa-solid fa-envelope conctact__icon"></i>
+                    <div>
+                        <h3 class="conctact__title">Envíame un correo</h3>
+                        <span class="conctact__data">mamorenoc2@gmail.com</span>
+                    </div>
+                </div>
+                <div class="conctact__item">
+                    <i class="fa-solid fa-location-dot conctact__icon"></i>
+                    <div>
+                        <h3 class="conctact__title">Veámonos</h3>
+                        <span class="conctact__data">Medellín, Antioquia, Colombia</span>
+                    </div>
+                </div>
+            </div>
+            <form action="" class="contact__form">
+                <div class="form__group">
+                    <div class="form__input">
+                        <input type="text" placeholder="Nombre" class="input__control" />
+                    </div>
+                    <div class="form__input">
+                        <input type="email" placeholder="Correo" class="input__control" />
+                    </div>
+                    <div class="form__input">
+                        <input type="text" placeholder="Asunto" class="input__control" />
+                    </div>
+                    <div class="form__input">
+                        <textarea name="" id="" cols="30" rows="10" class="input__control textarea" placeholder="Escribe tu mensaje aqui"></textarea>
+                    </div>
+                    <button class="btn contact__btn">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    </main>
+    <!-- ==================  FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <p class="footer__copyright"> &copy; 2023 Manuela. All Rights Reserved</p>
+
+            <div class="footer__social-links">
+                <a href="https://twitter.com/mamorenoc2" target="_blank" class="footer__social-link">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/mamorenoc2/" target="_blank" class="footer__social-link">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mamorenoc2/" target="_blank" class="footer__social-link">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/mamorenoc2" target="_blank" class="footer__social-link">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
