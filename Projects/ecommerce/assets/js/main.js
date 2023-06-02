@@ -87,9 +87,9 @@ var newSwiper = new Swiper(".new-swiper", {
 /*=============== SHOW SCROLL UP ===============*/ 
 
 function scrollUp() {
-    const scrollUp = document.getElementById('scroll-up');
+    const scroll = document.getElementById('scroll-up');
     // when the scroll is higher than 350 viewport height, add the show-scroll class to a tag with the scroll-top class
-    if(this.scrollY >= 350) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+    if(this.scrollY >= 350) scroll.classList.add('show-scroll'); else scroll.classList.remove('show-scroll')
 }
 window.addEventListyener('scroll', scrollUp)
 /*=============== LIGHT BOX ===============*/
