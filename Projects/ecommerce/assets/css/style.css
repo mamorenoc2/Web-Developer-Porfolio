@@ -622,6 +622,7 @@ input {
     padding: 2rem 0;
     border-radius: 1rem;
     text-align: center;
+    overflow: hidden;
 }
 
 .shop__img{
@@ -629,9 +630,97 @@ input {
     margin-bottom: var(--mb-1);
 }
 
+.shop__tag {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    background-color: var(--first-color);
+    color: #fff;
+    font-size: var(--small-font-size);
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+}
+
+.shop__title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.shop__subtitle {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.shop__prices {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.shop__price {
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+}
+
+.shop__discounts {
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    text-decoration: line-through;
+    font-weight: var(--font-medium);
+}
+
+.shop__button {
+    display: inline-flex;
+    padding: .5rem;
+    border-radius: .25rem .25rem .75rem .25rem;
+    position: absolute;
+    bottom: 0;
+    right: -3rem;
+}
+
+.shop__icon {
+    font-size: 1.25rem;
+}
+
+.shop__content:hover .shop__img {
+    transition: all .3s ease;
+    transform: translateY(-.8rem);
+}
+
+.shop__content:hover .shop__button {
+    right: 0;
+}
+
 
 /*=============== PAGINATION ===============*/
 
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: 1.5rem;
+    margin-top: var(--mb-2-5);
+    font-size: var(--normal-font-size);
+}
+
+.pagination span{
+    width: 2.2rem;
+    height: 2.2rem;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pagination .current{
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+.pagination__icon {
+    font-size: var(--h2-font-size);
+}
 
 /*=============== DETAILS PAGE ===============*/
 
@@ -1066,14 +1155,78 @@ input {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 2rem;
     }
+
+    .shop__container {
+        grid-template-columns: 1.6fr 3.4fr;
+    }
+
+    .shop__content {
+        padding: 2rem 0 1.5rem;
+        border-radius: .75rem;
+    }
+
+    .shop__img {
+        width: 120px;
+    }
+
+    .shop__img.
+    .shop__subtitle {
+        margin-bottom: var(--mb-0-5);
+    }
+
+    .shop__title {
+        font-size: var(--normal-font-size);
+    }
 }
 
 /* For medium devices */
 @media screen and (max-width: 767px) {
-    
+    .shop__container {
+        grid-template-columns: 520px;
+        justify-content: center;
+        row-gap: 2rem;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
 }
 
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+
+    .shop__container {
+        grid-template-columns: .8fr;
+    }
+
+    .shop__items {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 1.25rem 1.4rem;
+    }
+
+    .pagination span {
+        height: 1.8rem;
+        width: 1.8rem;
+        line-height: 30px;
+    }
+
+    .pagination {
+        column-gap: .4rem;
+    }
+
+}
 
 /* For small devices */
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 320px) {
+
+    .shop__container {
+        grid-template-columns: 1fr;
+    }
+
+    .pagination span {
+        font-size: var(--small-font-size);
+    }
+
+}
