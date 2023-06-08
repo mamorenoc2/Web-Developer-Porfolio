@@ -98,16 +98,38 @@ var newSwiper = new Swiper(".new-swiper", {
 
 /*=============== SHOW SCROLL UP ===============*/ 
 
-function scrollUp() {
-    const scroll = document.getElementById('scroll-up');
-    // when the scroll is higher than 350 viewport height, add the show-scroll class to a tag with the scroll-top class
-    if(this.scrollY >= 350) scroll.classList.add('show-scroll'); else scroll.classList.remove('show-scroll')
-}
-window.addEventListyener('scroll', scrollUp)
+
 /*=============== LIGHT BOX ===============*/
 
 
 /*=============== QUESTIONS ACCORDION ===============*/
+const accordionItem = document.querySelectorAll('.questions__item')
+
+accordionItem.forEach((item) => {
+    const accordionHeader = item.querySelector('.questions__header')
+
+    accordionHeader.addEventListener('click', () => {
+        const openItem = document.querySelector('.accordion-open')
+
+        toggleItem(item)
+        if(openItem && openItem !== item) {
+            toggleItem(openItem)
+        }
+    })
+})
+
+const toggleItem = (item) => {
+    const accordionContent = item.querySelector('.questions__content');
+
+    if (item.classList.contains('accordion-open')) {
+        accordionContent.removeAttribute('style')
+        item.classList.remove('accordion-open')
+    }
+    else {
+        accordionContent.style.height = accordionContent.scrollHeight + 'px';
+        item.classList.add('accordion-open')
+    }
+}
 
 
 /*=============== STYLE SWITCHER ===============*/
