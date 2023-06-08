@@ -586,6 +586,7 @@ input {
 }
 
 .filter__title {
+    margin-left: .5rem;
     font-size: var(--h3-font-size);
     text-transform: uppercase;
 }
@@ -613,6 +614,7 @@ input {
 
 .shop__items {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 1.6rem;
 }
 
@@ -690,6 +692,43 @@ input {
 
 .shop__content:hover .shop__button {
     right: 0;
+}
+
+.shop__form {
+    row-gap: 1.5rem;
+}
+
+.shop_form-content {
+    display: flex;
+    column-gap: .5rem;
+    background: var(--container-color);
+    border-radius: .5rem;
+    padding: .25rem;
+}
+
+.shop__form-input {
+    width: 100%;
+    border: 1px solid var(--title-color);
+    border-radius: .5rem;
+    background: var(--container-color);
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    padding: .25rem .5rem .5rem .5rem;
+}
+
+.shop__form-input:focus {
+    border: 1px solid var(--first-color);
+}
+
+.shop__form-icon {
+    border-radius: .5rem;
+    padding: .75rem;
+    color: white;
+    background-color: var(--first-color);
+}
+
+.shop__form-icon:hover {
+    background-color: var(--first-color-alt);
 }
 
 

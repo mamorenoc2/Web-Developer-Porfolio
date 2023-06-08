@@ -1,12 +1,14 @@
+
+
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
-navToggle = document.getElementById('nav-toggle'),
-navClose = document.getElementById('nav-close')
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
 
 
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
-if(navToggle) {
+if (navToggle) {
     navToggle.addEventListener("click", () => {
         navMenu.classList.add('show-menu')
     })
@@ -14,7 +16,7 @@ if(navToggle) {
 
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
-if(navClose) {
+if (navClose) {
     navClose.addEventListener("click", () => {
         navMenu.classList.remove('show-menu')
     })
@@ -23,9 +25,9 @@ if(navClose) {
 
 /*=============== SHOW CART ===============*/
 const cart = document.getElementById('cart'),
-cartShop = document.getElementById('cart-shop'),
-cartClose = document.getElementById('cart-close')
-if(cartShop) {
+    cartShop = document.getElementById('cart-shop'),
+    cartClose = document.getElementById('cart-close')
+if (cartShop) {
     cartShop.addEventListener("click", () => {
         cart.classList.add('show-cart')
     })
@@ -33,7 +35,7 @@ if(cartShop) {
 
 /*===== CART SHOW =====*/
 /* Validate if constant exists */
-if(cartClose) {
+if (cartClose) {
     cartClose.addEventListener("click", () => {
         cart.classList.remove('show-cart')
     })
@@ -46,9 +48,9 @@ if(cartClose) {
 /*=============== SHOW LOGIN ===============*/
 
 const login = document.getElementById('login'),
-loginToogle = document.getElementById('loggin-toggle'),
-loginClose = document.getElementById('login-close')
-if(loginToogle) {
+    loginToogle = document.getElementById('loggin-toggle'),
+    loginClose = document.getElementById('login-close')
+if (loginToogle) {
     loginToogle.addEventListener("click", () => {
         login.classList.add('show-login')
     })
@@ -56,7 +58,7 @@ if(loginToogle) {
 
 /*===== LOGIN SHOW =====*/
 /* Validate if constant exists */
-if(loginClose) {
+if (loginClose) {
     loginClose.addEventListener("click", () => {
         login.classList.remove('show-login')
     })
@@ -82,7 +84,7 @@ var homeSwiper = new Swiper(".home-swiper", {
 function scrollHeader() {
     const header = document.getElementById('header')
     //When the scroll is greater tha 50 viewport height add the scroll-header to the header tag
-    if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
+    if (this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
 }
 window.addEventListener('scroll', scrollHeader)
 
@@ -96,7 +98,7 @@ var newSwiper = new Swiper(".new-swiper", {
 });
 
 
-/*=============== SHOW SCROLL UP ===============*/ 
+/*=============== SHOW SCROLL UP ===============*/
 
 
 /*=============== LIGHT BOX ===============*/
@@ -112,7 +114,7 @@ accordionItem.forEach((item) => {
         const openItem = document.querySelector('.accordion-open')
 
         toggleItem(item)
-        if(openItem && openItem !== item) {
+        if (openItem && openItem !== item) {
             toggleItem(openItem)
         }
     })
