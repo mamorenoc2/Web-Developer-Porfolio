@@ -36,7 +36,7 @@ const data = [
     },
     {
         id: 5,
-        name: "Garmin Venu Smartwatch ",
+        name: "Garmin Smartwatch ",
         img: "/assets/img/product-6.png",
         price: 74,
         cat: "Casual",
