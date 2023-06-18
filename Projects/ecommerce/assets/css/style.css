@@ -1436,6 +1436,7 @@ input {
     color: #fff;
     text-align: right;
     line-height: 40px;
+    cursor: pointer;
 }
 
 .lightbox__caption {
@@ -1512,7 +1513,6 @@ input {
 }
 
 /*=============== STYLE SWITCHER ===============*/
-
 
 /* Style switcher open */
 
