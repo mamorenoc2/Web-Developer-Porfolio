@@ -1615,7 +1615,7 @@ input {
         width: 120px;
     }
 
-    .shop__img.
+    .shop__img,
     .shop__subtitle {
         margin-bottom: var(--mb-0-5);
     }
