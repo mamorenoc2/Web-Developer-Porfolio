@@ -5,3 +5,10 @@
  */
 
 "use strict";
+
+/**
+ * Home pade Search
+ */
+
+const /**{NodeElement} */ $searchField = document.querySelector('[data-search-field]');
+const /**{NodeElement} */ $searchBtn = document.querySelector('[data-search-btn]')
